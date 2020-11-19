@@ -1,0 +1,25 @@
+.login {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+
+.login > img {
+    width: 50%;
+    display: block;
+}
+
+.login > button {
+    padding: 20px;
+    color: #fff;
+    background-color: #15883e;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    border-width: 0;
+    max-width: 250px;
+    letter-spacing: 2px;
+    width: 50%;
+}
