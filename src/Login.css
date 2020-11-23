@@ -22,4 +22,9 @@
     max-width: 250px;
     letter-spacing: 2px;
     width: 50%;
+    cursor: pointer;
+}
+
+.login > button :hover {
+    transform: scale(1.02);
 }
