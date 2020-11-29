@@ -1,0 +1,159 @@
+.body {
+    height: 100vh;
+    flex: 0.85;
+    color: white;
+    padding: 20px;
+    overflow-y: scroll;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+    background-color: rgb(91, 87, 115);
+}
+
+.body__songsTitle{
+margin-left: 30px;
+margin-bottom: 20px;
+display: flex;
+justify-content: space-between;
+}
+
+.body__index {
+    display: flex;
+    flex: 0.1;
+}
+
+.body__title{
+    display: flex;
+    flex: 0.5;
+    margin-right: auto;
+    margin-left: -70px;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 300px;
+}
+
+.body__time{
+    display: flex;
+    flex: 0.2;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+
+.body__album{
+    display: flex;
+    flex: 0.3;
+    padding-left: 45px;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.body__songs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body__songs :hover{
+    cursor: pointer;
+}
+
+.body::-webkit-scrollbar{
+    display: none;
+}
+
+.body__info{
+    display: flex;
+}
+
+.body__info > img {
+    height: 14vw;
+    -webkit-box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.body__description > h4 {
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.body__description > p{
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 96px;
+    margin: 0.08em 0px;
+    margin-left: -8px;
+    margin-bottom: -8px;
+    letter-spacing: -0.04em;
+}
+
+.body__icons {
+    margin-top: 50px;
+    margin-left: -10px;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.body__iconPlay {
+    margin: 10px;
+    margin-left: 20px;
+    color:green;
+    font-size: 56px !important;
+}
+
+.body__iconPlay :hover {
+    transform: scale(1.08);
+}
+
+.body__iconFav, .body__iconHorizon{
+    margin: 20px;
+    color: gray;
+}
+
+.body__iconFav :hover, 
+.body__iconHorizon :hover {
+    transition: color 200ms ease-in;
+    color: white;
+}
+
+.body__tracks :hover {
+    cursor: pointer;
+    background-color:black;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+
+.body > hr {
+    border: none;
+    background-color:#3B3B3B;
+    width: 98%;
+    margin: 8px auto;
+    height: 1px;
+}
+
+.body__song {
+    display: flex;
+    flex: 0.5;
+    min-width: 300px;
+}
+
+.body__songAlbumName{
+    display: flex;
+    flex: 0.3;
+    padding-right: -30px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.body__songDuration{
+    display: flex;
+    flex: 0.2;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 600;
+}

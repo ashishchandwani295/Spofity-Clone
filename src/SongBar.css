@@ -1,0 +1,30 @@
+.songbar {
+  margin-left: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  min-width: 500px;
+}
+
+.songbar > p {
+    font-size: 14px;
+}
+
+.songbar__images {
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.songbar__name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.songbar__artist {
+    font-size: 14px;
+    color: gray;
+    font-weight: 600;
+}
