@@ -18,7 +18,7 @@ function App() {
       window.location.hash = "";
       const _token = hash.access_token;
 
-      if(_token){
+      if(token){
         
         dispatch({
           type: 'SET_TOKEN',
@@ -26,9 +26,6 @@ function App() {
         });
 
         spotify.setAccessToken(_token);
-
-        localStorage.setItem('token', _token)
-        console.log(localStorage.getItem('token'))
 
         spotify.getMe()
         .then( user => {dispatch({
