@@ -65,7 +65,7 @@ function App() {
 
   return (
     <div className="app">
-      { (localStorage.getItem('token') !== undefined)  ? (
+      { (localStorage.getItem('token') !== null)  ? (
       <Player spotify={spotify} />
       ) : (
       <Login />
