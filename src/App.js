@@ -18,7 +18,7 @@ function App() {
       window.location.hash = "";
       const _token = hash.access_token;
 
-      if(token){
+
         
         dispatch({
           type: 'SET_TOKEN',
@@ -55,7 +55,7 @@ function App() {
         })
         .catch(err => console.log(err));
 
-      }
+      
   }, [])
 
   console.log(user)
