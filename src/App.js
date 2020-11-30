@@ -10,13 +10,18 @@ const spotify = new spotifyWebApi();
 
 function App() {
 
-  const [{ user, token, playlists, tracks }, dispatch ] = useDataLayerValue();
+  const [{ user, token, playlists, tracks, reload }, dispatch ] = useDataLayerValue();
   
   useEffect(() => {
       console.log(spotify)
       const hash = getAccessTokenFromResponse();
       window.location.hash = "";
       const _token = hash.access_token;
+
+      dispatch({
+        type:'SET_RELOAD',
+        reload: !reload
+      })
 
       if(_token){
         
@@ -59,7 +64,7 @@ function App() {
         .catch(err => console.log(err));
 
       }
-  }, [])
+  }, [reload])
 
   console.log(user)
 

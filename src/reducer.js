@@ -36,6 +36,12 @@ const reducer = (state, action) => {
                 ...state,
                 tracks: action.tracks
             }
+
+        case 'SET_RELOAD': 
+        return {
+            ...state,
+            reload: action.reload
+        }
     
         default:
             return {state}
