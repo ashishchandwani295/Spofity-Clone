@@ -18,14 +18,18 @@ function App() {
       window.location.hash = "";
       const _token = hash.access_token;
 
+      if(_token){
+        localStorage.setItem('token', _token);
+      }
+      const localToken = localStorage.getItem('token');
 
         
         dispatch({
           type: 'SET_TOKEN',
-          token: _token
+          token: localToken
         });
 
-        spotify.setAccessToken(_token);
+        spotify.setAccessToken(localToken);
 
         spotify.getMe()
         .then( user => {dispatch({
@@ -62,7 +66,7 @@ function App() {
 
   return (
     <div className="app">
-      { token  ? (
+      { (localStorage.getItem('token') !== null)  ? (
       <Player spotify={spotify} />
       ) : (
       <Login />
