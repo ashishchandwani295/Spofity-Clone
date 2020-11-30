@@ -27,6 +27,8 @@ function App() {
 
         spotify.setAccessToken(_token);
 
+        localStorage.setItem('token', _token)
+
         spotify.getMe()
         .then( user => {dispatch({
           type: 'SET_USER',
@@ -62,7 +64,7 @@ function App() {
 
   return (
     <div className="app">
-      { token ? (
+      { (localStorage.getItem('token') !== undefined)  ? (
       <Player spotify={spotify} />
       ) : (
       <Login />
